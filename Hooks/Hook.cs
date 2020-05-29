@@ -6,20 +6,18 @@ using System.Linq;
 using System.Text;
 using TechTalk.SpecFlow;
 
-namespace BlueSkyCitadelProject.Hooks
+namespace BlueSkyCitadelProject4.Hooks
 {
     [Binding]
     public  class Hook
     {
-         public static IWebDriver driver;
+        public static IWebDriver driver;
 
         [BeforeScenario]
         public void BeforeScenario()
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
-
-
         }
 
         [AfterScenario]

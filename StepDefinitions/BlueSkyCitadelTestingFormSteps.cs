@@ -1,18 +1,21 @@
-﻿using BlueSkyCitadelProject.PageObjects;
+﻿using BlueSkyCitadelProject4.PageObjects;
 using System;
 using TechTalk.SpecFlow;
 
-namespace BlueSkyCitadelProject.StepDefinitions
+namespace BlueSkyCitadelProject4.StepDefinitions
 {
     [Binding]
     public class BlueSkyCitadelTestingFormSteps
-    {
-        AutomationTestingFormPage automationTestingFormPage;
+    { 
+       AutomationTestingFormPage automationTestingFormPage;
     
         public BlueSkyCitadelTestingFormSteps()
         {
             automationTestingFormPage = new AutomationTestingFormPage();
+
         }
+
+    
         [Given(@"I navigate to the BlueSky Testing Form")]
         public void GivenINavigateToTheBlueSkyTestingForm()
         {
@@ -22,55 +25,55 @@ namespace BlueSkyCitadelProject.StepDefinitions
         [When(@"I enter the Single Line Text")]
         public void WhenIEnterTheSingleLineText()
         {
-            //ScenarioContext.Current.Pending();
+            automationTestingFormPage.EnterSingleLineText();
         }
         
         [When(@"I enter the one in the select Box")]
         public void WhenIEnterTheOneInTheSelectBox()
         {
-           // ScenarioContext.Current.Pending();
+            automationTestingFormPage.SelectOneFromSelectOneTwoThree();
         }
         
         [When(@"I enter Email")]
         public void WhenIEnterEmail()
         {
-           // ScenarioContext.Current.Pending();
+            automationTestingFormPage.EnterEmail();
         }
         
         [When(@"I select the Multi-Select")]
         public void WhenISelectTheMulti_Select()
         {
-           // ScenarioContext.Current.Pending();
+            automationTestingFormPage.SelectMultiSelector();
         }
         
         [When(@"I select the Radio List")]
         public void WhenISelectTheRadioList()
         {
-           // ScenarioContext.Current.Pending();
+            automationTestingFormPage.ClickRadioList();
         }
         
         [When(@"I select the Check Box List")]
         public void WhenISelectTheCheckBoxList()
         {
-           // ScenarioContext.Current.Pending();
+          //  ScenarioContext.Current.Pending();
         }
         
         [When(@"I select United Kingdom as Country")]
         public void WhenISelectUnitedKingdomAsCountry()
         {
-           // ScenarioContext.Current.Pending();
+            automationTestingFormPage.SelectUnitedKingdomFromCountry();
         }
         
         [When(@"I select (.*)th of the current month")]
         public void WhenISelectThOfTheCurrentMonth(int message)
         {
-           // ScenarioContext.Current.Pending();
+            automationTestingFormPage.EnterDateFromCalendar();
         }
         
         [When(@"I enter Paragraph Text")]
         public void WhenIEnterParagraphText()
         {
-           // ScenarioContext.Current.Pending();
+            automationTestingFormPage.EnterParagraphText();
         }
         
         [When(@"I click on the Submit button")]
@@ -82,7 +85,7 @@ namespace BlueSkyCitadelProject.StepDefinitions
         [Then(@"message ""(.*)""")]
         public void ThenMessage(string message)
         {
-            //ScenarioContext.Current.Pending();
+          //  ScenarioContext.Current.Pending();
         }
     }
 }
